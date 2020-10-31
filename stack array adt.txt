@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include<conio.h>
+#define max 5
+static int stack[max];
+int top=-1;
+
+void push(int x)
+{
+    stack[++top]=x;
+}
+int pop()
+{
+return (stack[top--]);
+}
+void view()
+{
+    int i;
+    if(top<o)
+      printf("\n stack empty \n");
+    else
+    {
+      printf("\n top-->");
+      for(i=top;i>=0;i--)
+      {
+          printf("%4d", stack[i]);
+      }
+      printf("\n");
+    }
+}
+main()
+{
+     printf("\n stack operation \n");
+     printf("1.push ");
+     printf("2.pop ");
+     printf("3.view ");
+     printf("4.quit \n");
+     printf("enter choice : ");
+     scanf("%d",&ch);
+     switch(ch)
+     {
+         case1:
+          if(top<max-1)
+          {
+              printf("\nEnter stack element :");
+              scanf("%d",&val);
+              push(val);
+          }
+          else
+             printf("\n stack overflow \n");
+          break;
+        case2;
+           if(top<0)
+              printf("\n stack underflow \n");
+            else
+            {
+                val=pop();
+                printf("\n popped element is %d\n",val);
+            }
+            break;
+        case3:
+            view();
+            break;
+        case4:
+            exit(0);
+        default:
+            printf("\n invalid choice \n");
+     }
+}
+
+}
